@@ -7,6 +7,7 @@ import {ProductType} from "../types/product.type";
 })
 export class ProductService {
 
+  // Массив списка продуктов
   private products: ProductType[] = [
     {
       image: 'product-macaroons01.png',

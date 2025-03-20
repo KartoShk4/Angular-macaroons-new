@@ -1,1 +1,21 @@
-<p>product-list works!</p>
+<section class="products" id="products" #productsElement>
+  <div class="container">
+    <h2 class="products-title">Выберите свой макарун</h2>
+    <ul class="products-list">
+      <li class="product-item" *ngFor="let product of products; let i = index;">
+        <div class="product-item-image">
+          <img src="assets/images/products/{{ product.image }}" alt="Макарун с малиной {{i + 1}}">
+        </div>
+        <div class="product-item-action">
+          <h3 class="product-item-title">{{ product.title }}</h3>
+          <p class="product-item-count">{{ product.quantity }} шт.</p>
+          <p class="product-item-price">{{ product.price }} руб.</p>
+          <form>
+            <button type="button" class="btn product-item-btn">Заказать</button>
+<!--            (click)="addToCard(product, orderElement)-->
+          </form>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
