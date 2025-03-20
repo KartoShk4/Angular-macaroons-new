@@ -32,32 +32,7 @@ export class AppComponent {
   ];
 
   // Блок продуктов
-  public products: ProductType[] = [
-    {
-      image: 'product-macaroons01.png',
-      title: 'Макарун с малиной',
-      quantity: 2,
-      price: 2.45,
-    },
-    {
-      image: 'product-macaroons02.png',
-      title: 'Макарун с манго',
-      quantity: 1,
-      price: 1.80,
-    },
-    {
-      image: 'product-macaroons03.png',
-      title: 'Пирог с ванилью',
-      quantity: 1,
-      price: 1.90,
-    },
-    {
-      image: 'product-macaroons04.png',
-      title: 'Пирог с фисташками',
-      quantity: 1,
-      price: 2.00,
-    },
-  ];
+  public products: ProductType[] = [];
 
   // Для подарка, указываем false по умолчанию.
   showPresent: boolean = false;
