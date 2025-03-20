@@ -6,12 +6,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {FormsModule} from "@angular/forms";
 import {NgForOf} from "@angular/common";
+import { ProductListComponent } from './components/product-list/product-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
