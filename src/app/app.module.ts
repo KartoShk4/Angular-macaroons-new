@@ -16,6 +16,7 @@ import { CookieAdvantagesComponent } from './components/cookie-advantages/cookie
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ButtonHoverDirective } from './directives/button-hover.directive';
 import { UnderlineHoverDirective } from './directives/underline-hover.directive';
+import { TruncateTextPipe } from './pipes/truncate-text.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { UnderlineHoverDirective } from './directives/underline-hover.directive'
     CookieAdvantagesComponent,
     ProductCardComponent,
     ButtonHoverDirective,
-    UnderlineHoverDirective
+    UnderlineHoverDirective,
+    TruncateTextPipe
   ],
   imports: [
     BrowserModule,
