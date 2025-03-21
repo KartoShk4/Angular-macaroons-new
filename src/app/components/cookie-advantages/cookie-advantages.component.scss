@@ -111,4 +111,28 @@
   font-size: 15px;
   line-height: 20px;
   color: #331907;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.advantages-list-desc::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all .3s ease-in-out;
+  z-index: -1;
+
+}
+
+.advantages-list-desc:hover::before {
+  opacity: 1;
+  transform: scale(1);
 }

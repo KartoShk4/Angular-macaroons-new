@@ -15,7 +15,10 @@
           <span>{{ i + 1 }}</span>
         </div>
         <h3 class="advantages-list-title">{{advantage.title}}</h3>
-        <p class="advantages-list-desc">{{advantage.description}}</p>
+        <p class="advantages-list-desc"
+        ShowFullText
+           [fullText]="(advantage.description | truncateText).fullText">
+        {{(advantage.description | truncateText).truncatedText}}</p>
       </li>
     </ul>
   </div>
