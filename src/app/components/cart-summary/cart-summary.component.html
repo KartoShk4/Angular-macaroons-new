@@ -1,6 +1,7 @@
 <div class="cart">
-  <a href="#" class="cart-image-wrap">
+  <a href="#order" class="cart-image-wrap">
     <img src="assets/images/cart.png" alt="cart" class="cart-image">
+    <div class="total-items"><span class="total-items-text">{{ totalItems }}</span></div>
   </a>
   <div class="cart-message">
     <div class="message">{{ totalPrice | number: '1.2-2' }} руб.</div>
