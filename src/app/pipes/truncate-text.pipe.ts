@@ -4,17 +4,17 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'truncateText'
 })
 export class TruncateTextPipe implements PipeTransform {
-  transform(value: string, limit: number = 95): string {
-    // Если текста нет, то возвращаем пустую строку
-    if (!value) return '';
+  // fullText возвращаем для того что бы реализовать возможность показа текста полностью
+  transform(value: string, limit: number = 95): { truncatedText: string, fullText: string } {
+    // Если текста нет, то возвращаем пустые строки
+    if (!value) return { truncatedText: '', fullText: '' };
 
     // Если текст короче или равен 95, оставляем как есть
     if (value.length <= limit) {
-      return value;
+      return { truncatedText: value, fullText: value };
     }
 
     // Обрезаем текст и добавляем три точки
-    return value.slice(0, limit) + '...';
-
+    return { truncatedText: value.slice(0, limit) + '...', fullText: value };
   }
 }

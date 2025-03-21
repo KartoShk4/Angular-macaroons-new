@@ -2,6 +2,7 @@ import {LOCALE_ID, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import localeRu from '@angular/common/locales/ru';
 
+
 // Регистрируем локаль
 registerLocaleData(localeRu);
 
@@ -17,6 +18,7 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { ButtonHoverDirective } from './directives/button-hover.directive';
 import { UnderlineHoverDirective } from './directives/underline-hover.directive';
 import { TruncateTextPipe } from './pipes/truncate-text.pipe';
+import { ShowFullTextDirective } from './directives/show-full-text.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { TruncateTextPipe } from './pipes/truncate-text.pipe';
     ProductCardComponent,
     ButtonHoverDirective,
     UnderlineHoverDirective,
-    TruncateTextPipe
+    TruncateTextPipe,
+    ShowFullTextDirective
   ],
   imports: [
     BrowserModule,

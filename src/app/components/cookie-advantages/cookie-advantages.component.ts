@@ -4,7 +4,7 @@ import { AdvantagesType } from "../../types/advantages.type";
 @Component({
   selector: 'cookie-advantages',
   templateUrl: './cookie-advantages.component.html',
-  styleUrls: ['./cookie-advantages.component.scss']
+  styleUrls: ['./cookie-advantages.component.scss'],
 })
 export class CookieAdvantagesComponent implements OnInit {
 
