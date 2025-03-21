@@ -25,6 +25,6 @@ export class ProductListComponent implements OnInit {
   // Метод для добавления товара в корзину
   addToCart(product: ProductType): void {
     this.cartService.addToCart(product);
-    alert(`${product.title} добавлен в корзину!`)
+    // alert(`${product.title} добавлен в корзину!`)
   }
 }

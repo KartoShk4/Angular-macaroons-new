@@ -11,8 +11,7 @@
           <p class="product-item-count">{{ product.quantity }} шт.</p>
           <p class="product-item-price">{{ product.price }} руб.</p>
           <form>
-            <button type="button" class="btn product-item-btn">Заказать</button>
-<!--            (click)="addToCard(product, orderElement)-->
+            <button type="button" class="btn product-item-btn" (click)="addToCart(product)">Заказать</button>
           </form>
         </div>
       </li>

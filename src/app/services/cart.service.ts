@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import {ProductType} from "../types/product.type";
+import { BehaviorSubject } from "rxjs";
+import { ProductType } from "../types/product.type";
 
 @Injectable({
   // Сервис делаем доступным во всём приложении
@@ -8,17 +9,20 @@ import {ProductType} from "../types/product.type";
 export class CartService {
   // Товары в корзине
   private cartItems: ProductType[] = [];
+  private cartSubject = new BehaviorSubject<ProductType[]>([]);
 
   constructor() { }
 
   // Добавляем товары в корзину
   addToCart(product: ProductType): void {
     this.cartItems.push(product);
+    this.cartSubject.next(this.cartItems);
   }
 
   // Удаляем товары из корзины
   removeFromCart(productId: number): void {
-    this.cartItems = this.cartItems.filter((item) => item.id !== productId);
+    this.cartItems = this.cartItems.filter((item: ProductType): boolean => item.id !== productId);
+    this.cartSubject.next(this.cartItems);
   }
 
   // Получаем список товаров в корзине
@@ -33,6 +37,11 @@ export class CartService {
 
   // Получаем всю сумму покупок
   getTotalPrice():number {
-    return this.cartItems.reduce((total, item) => total + item.price, 0);
+    return this.cartItems.reduce((total: number, item: ProductType): number => total + item.price, 0);
+  }
+
+  // Получаем информацию об изменении корзины
+  getCartUpdate() {
+    return this.cartSubject.asObservable();
   }
 }
