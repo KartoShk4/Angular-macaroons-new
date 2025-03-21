@@ -117,6 +117,20 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .cart-image {
+    max-width: 45% !important;
+  }
+
+  .total-items {
+    top: -5px !important;
+    right: 0;
+    width: 7px !important;
+    height: 7px !important;
+    padding: 7px !important;
+  }
+}
+
 @media screen and (max-width: 1440px) {
   .cart-image {
     max-width: 50%;
