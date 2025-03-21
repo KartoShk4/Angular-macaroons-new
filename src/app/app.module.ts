@@ -9,6 +9,7 @@ import {NgForOf} from "@angular/common";
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
 import { CookieAdvantagesComponent } from './components/cookie-advantages/cookie-advantages.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CookieAdvantagesComponent } from './components/cookie-advantages/cookie
     FooterComponent,
     ProductListComponent,
     CartSummaryComponent,
-    CookieAdvantagesComponent
+    CookieAdvantagesComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
