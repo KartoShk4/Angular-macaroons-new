@@ -1,11 +1,15 @@
-import { NgModule } from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import localeRu from '@angular/common/locales/ru';
+
+// Регистрируем локаль
+registerLocaleData(localeRu);
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {FormsModule} from "@angular/forms";
-import {NgForOf} from "@angular/common";
+import {NgForOf, registerLocaleData} from "@angular/common";
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
 import { CookieAdvantagesComponent } from './components/cookie-advantages/cookie-advantages.component';
@@ -30,7 +34,7 @@ import { UnderlineHoverDirective } from './directives/underline-hover.directive'
     FormsModule,
     NgForOf
   ],
-  providers: [],
+  providers: [{ provide: LOCALE_ID, useValue: 'ru-RU' }],
   bootstrap: [AppComponent, HeaderComponent, FooterComponent]
 })
 export class AppModule { }

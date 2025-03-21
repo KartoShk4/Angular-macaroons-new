@@ -5,7 +5,7 @@
   <div class="product-item-action">
     <h3 class="product-item-title">{{ product.title }}</h3>
     <p class="product-item-count">{{ product.quantity }} шт.</p>
-    <p class="product-item-price">{{ product.price | number: '1.2-2' }} руб.</p>
+    <p class="product-item-price">{{ product.price | currency:'BYN':'symbol':'1.2-2' }}</p>
     <form>
       <button ButtonHover hoverBackground type="button" class="btn product-item-btn" (click)="addToCart()">Заказать</button>
     </form>
