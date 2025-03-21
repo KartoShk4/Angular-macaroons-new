@@ -10,24 +10,28 @@ export class ProductService {
   // Массив списка продуктов
   private products: ProductType[] = [
     {
+      id: 1,
       image: 'product-macaroons01.png',
       title: 'Макарун с малиной',
       quantity: 2,
       price: 2.45,
     },
     {
+      id: 2,
       image: 'product-macaroons02.png',
       title: 'Макарун с манго',
       quantity: 1,
       price: 1.80,
     },
     {
+      id: 3,
       image: 'product-macaroons03.png',
       title: 'Пирог с ванилью',
       quantity: 1,
       price: 1.90,
     },
     {
+      id: 4,
       image: 'product-macaroons04.png',
       title: 'Пирог с фисташками',
       quantity: 1,
