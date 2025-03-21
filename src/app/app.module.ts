@@ -7,13 +7,15 @@ import { FooterComponent } from './components/footer/footer.component';
 import {FormsModule} from "@angular/forms";
 import {NgForOf} from "@angular/common";
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ProductListComponent
+    ProductListComponent,
+    CartSummaryComponent
   ],
   imports: [
     BrowserModule,
