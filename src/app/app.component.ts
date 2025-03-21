@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ProductType } from "./types/product.type";
 import { FormType } from "./types/form.type";
-import { AdvantagesType } from "./types/advantages.type";
 
 @Component({
   selector: 'app-root',
@@ -10,8 +9,6 @@ import { AdvantagesType } from "./types/advantages.type";
 })
 
 export class AppComponent {
-
-
 
   // Блок продуктов
   public products: ProductType[] = [];

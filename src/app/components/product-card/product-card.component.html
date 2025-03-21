@@ -1,1 +1,13 @@
-<p>product-card works!</p>
+<li class="product-item">
+  <div class="product-item-image">
+    <img src="assets/images/products/{{ product.image }}" alt="Макарун с малиной">
+  </div>
+  <div class="product-item-action">
+    <h3 class="product-item-title">{{ product.title }}</h3>
+    <p class="product-item-count">{{ product.quantity }} шт.</p>
+    <p class="product-item-price">{{ product.price | number: '1.2-2' }} руб.</p>
+    <form>
+      <button type="button" class="btn product-item-btn" (click)="addToCart()">Заказать</button>
+    </form>
+  </div>
+</li>
