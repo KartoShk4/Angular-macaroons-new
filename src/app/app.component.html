@@ -38,7 +38,7 @@
           <p class="form-data">Заполните данные для заказа:</p>
           <label><input type="text" placeholder="Ваше имя" name="name" class="form-input" required [(ngModel)]="formValues.name"></label>
           <label><input type="number" placeholder="+375 (__) ___ - __ - __" name="phone" class="form-input" required [(ngModel)]="formValues.phone"></label>
-          <button type="button" class="btn form-btn" (click)="createOrder()">Оформить заказ</button>
+          <button appButtonHover hoverBackground type="button" class="btn form-btn" (click)="createOrder()">Оформить заказ</button>
         </form>
       </div>
       <img src="assets/images/strawberry01.png" alt="Strawberries" class="order-form-img-big">

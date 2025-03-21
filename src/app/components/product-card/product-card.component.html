@@ -7,7 +7,7 @@
     <p class="product-item-count">{{ product.quantity }} шт.</p>
     <p class="product-item-price">{{ product.price | number: '1.2-2' }} руб.</p>
     <form>
-      <button type="button" class="btn product-item-btn" (click)="addToCart()">Заказать</button>
+      <button ButtonHover hoverBackground type="button" class="btn product-item-btn" (click)="addToCart()">Заказать</button>
     </form>
   </div>
 </li>

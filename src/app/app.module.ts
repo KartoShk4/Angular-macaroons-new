@@ -10,6 +10,8 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
 import { CookieAdvantagesComponent } from './components/cookie-advantages/cookie-advantages.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { ButtonHoverDirective } from './directives/button-hover.directive';
+import { UnderlineHoverDirective } from './directives/underline-hover.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     ProductListComponent,
     CartSummaryComponent,
     CookieAdvantagesComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ButtonHoverDirective,
+    UnderlineHoverDirective
   ],
   imports: [
     BrowserModule,
