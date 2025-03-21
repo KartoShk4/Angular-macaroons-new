@@ -34,9 +34,6 @@ export class AppComponent {
   // Блок продуктов
   public products: ProductType[] = [];
 
-  // Для подарка, указываем false по умолчанию.
-  showPresent: boolean = false;
-
   // Для валидации
   public formValues: FormType = {
     productTitle: '',
@@ -64,8 +61,6 @@ export class AppComponent {
     // Выводим alert если заказ успешно оформлен
     alert('Спасибо за заказ. Мы скоро свяжемся с вами');
 
-    // Для подарка, указываем true для отображения, если форма валидна.
-    this.showPresent = true;
 
     this.formValues = {
       productTitle: '',
