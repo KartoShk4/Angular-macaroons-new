@@ -8,6 +8,7 @@ import {FormsModule} from "@angular/forms";
 import {NgForOf} from "@angular/common";
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
+import { CookieAdvantagesComponent } from './components/cookie-advantages/cookie-advantages.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CartSummaryComponent } from './components/cart-summary/cart-summary.com
     HeaderComponent,
     FooterComponent,
     ProductListComponent,
-    CartSummaryComponent
+    CartSummaryComponent,
+    CookieAdvantagesComponent
   ],
   imports: [
     BrowserModule,

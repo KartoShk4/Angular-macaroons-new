@@ -20,28 +20,7 @@
     </div>
   </section>
 
-  <section class="advantages" id="advantages">
-    <div class="container">
-      <h2 class="advantages-title">Мы печём для вас вкуснейшие макаруны уже более 10 лет</h2>
-      <p class="advantages-desc">
-        Все пироженки мы готовим только из натуральных и качественных продуктов, без консервантов,
-        ароматизаторов, красителей. Используем в приготовлении сливочное масло 82,5%, без дрожжей, маргарина,
-        разрыхлителей и улучшителей муки.
-      </p>
-      <div class="advantages-image">
-        <img src="assets/images/macaroons/big-macaroon.png" alt="Большой макарун>">
-      </div>
-      <ul class="advantages-list">
-        <li class="advantages-list-item" *ngFor="let advantage of advantages; let i = index;">
-          <div class="circle-number">
-            <span>{{ i + 1 }}</span>
-          </div>
-          <h3 class="advantages-list-title">{{advantage.title}}</h3>
-          <p class="advantages-list-desc">{{advantage.description}}</p>
-        </li>
-      </ul>
-    </div>
-  </section>
+  <cookie-advantages></cookie-advantages>
 
   <product-list></product-list>
 
