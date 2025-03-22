@@ -23,5 +23,6 @@ export class ProductCardComponent {
 
     // Уведомляем родителя
     this.addedToCart.emit(this.product.title);
+
   }
 }

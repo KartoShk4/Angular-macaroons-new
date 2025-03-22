@@ -23,7 +23,8 @@ export class HeaderComponent {
   // Номер телефона
   public showPhoneNumber: { phone: string }[] = [
     {
-      phone: '+375 (29) 368-98-68'
+      // Без указания +
+      phone: '375293689868'
     },
   ];
 

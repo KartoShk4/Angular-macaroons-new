@@ -11,7 +11,6 @@
       <div class="macaroons-info-button">
         <form>
           <button ButtonHover hoverBackground type="button" class="btn macaroons-info-btn">Выбрать макарун</button>
-<!--          (click)="scrollTo(productsElement)"-->
         </form>
       </div>
       <div class="macaroons-info-image">
@@ -34,10 +33,17 @@
         <p class="order-form-desc">Выберите понравившийся макарун, заполните форму и ожидайте звонка нашего пекаря!</p>
         <form class="form">
           <p class="form-choice">Ваш выбор:</p>
-          <label><input type="text" placeholder="Выберите макарун" name="product" class="form-input" required readonly [(ngModel)]="formValues.productTitle"></label>
+          <label><input type="text" placeholder="Выберите макарун" name="product" class="form-input" required [(ngModel)]="formValues.productTitle"></label>
           <p class="form-data">Заполните данные для заказа:</p>
           <label><input type="text" placeholder="Ваше имя" name="name" class="form-input" required [(ngModel)]="formValues.name"></label>
-          <label><input type="number" placeholder="+375 (__) ___ - __ - __" name="phone" class="form-input" required [(ngModel)]="formValues.phone"></label>
+          <label><input type="number"
+                        [ngModel]="formValues.phone | formatPhone"
+                        (ngModelChange)="onPhoneInput($event)"
+                        placeholder="+375 (__) ___ - __ - __"
+                        name="phone"
+                        class="form-input"
+                        required>
+          </label>
           <button ButtonHover hoverBackground type="button" class="btn form-btn" (click)="createOrder()">Оформить заказ</button>
         </form>
       </div>

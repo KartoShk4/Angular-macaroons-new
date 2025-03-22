@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import { ProductService } from "../../services/product.service";
 import { ProductType } from "../../types/product.type";
 

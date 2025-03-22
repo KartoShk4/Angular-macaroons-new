@@ -10,7 +10,7 @@
       <img src="assets/images/{{ insta.image }}" alt="{{ insta.alt }}">
       <span class="social-desc">{{ insta.description }}</span>
     </a>
-    <a href="tel:{{ number.phone }}" class="phone" *ngFor="let number of showPhoneNumber">{{ number.phone }}</a>
+    <a href="tel:{{ number.phone }}" class="phone" *ngFor="let number of showPhoneNumber">{{ number.phone | formatPhone}}</a>
     <p class="copy-adaptive-visible">&copy Все права защищены, 2020</p>
   </div>
 </footer>

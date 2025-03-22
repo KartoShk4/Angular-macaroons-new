@@ -19,6 +19,6 @@
         <li class="menu-item"><a UnderlineHover href="#order">Оформить заказ</a></li>
       </ul>
     </nav>
-    <a href="tel:{{ number.phone }}" class="phone" *ngFor="let number of showPhoneNumber;">{{ number.phone }}</a>
+    <a href="tel:{{ number.phone }}" class="phone" *ngFor="let number of showPhoneNumber;">{{ number.phone | formatPhone }}</a>
   </div>
 </header>

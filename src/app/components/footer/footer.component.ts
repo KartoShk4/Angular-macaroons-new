@@ -10,7 +10,7 @@ export class FooterComponent {
   // Номер телефона
   public showPhoneNumber: { phone: string }[] = [
     {
-      phone: '+375 (29) 368-98-68'
+      phone: '375293689868'
     },
   ];
 

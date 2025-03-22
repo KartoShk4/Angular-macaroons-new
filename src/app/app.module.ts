@@ -2,7 +2,6 @@ import {LOCALE_ID, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import localeRu from '@angular/common/locales/ru';
 
-
 // Регистрируем локаль
 registerLocaleData(localeRu);
 
@@ -19,6 +18,7 @@ import { ButtonHoverDirective } from './directives/button-hover.directive';
 import { UnderlineHoverDirective } from './directives/underline-hover.directive';
 import { TruncateTextPipe } from './pipes/truncate-text.pipe';
 import { ShowFullTextDirective } from './directives/show-full-text.directive';
+import { FormatPhonePipe } from './pipes/format-phone.pipe';
 
 @NgModule({
   declarations: [
@@ -32,12 +32,13 @@ import { ShowFullTextDirective } from './directives/show-full-text.directive';
     ButtonHoverDirective,
     UnderlineHoverDirective,
     TruncateTextPipe,
-    ShowFullTextDirective
+    ShowFullTextDirective,
+    FormatPhonePipe,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    NgForOf
+    NgForOf,
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'ru-RU' }],
   bootstrap: [AppComponent, HeaderComponent, FooterComponent]
